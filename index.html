@@ -1,0 +1,442 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="See, Plan, Rewind: Progress-Aware Vision-Language-Action Models for Robust Robotic Manipulation"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="static/assets/favicon.svg" />
+    <title>
+      See, Plan, Rewind: Progress-Aware VLA Models for Robust Robotic Manipulation
+    </title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+
+  <body>
+    <!-- ==================== Hero: Title + Authors + Links ==================== -->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                See, Plan, Rewind<br />
+                Progress-Aware Vision-Language-Action<br />
+                Models for Robust Robotic Manipulation
+              </h1>
+              <div class="is-size-4 has-text-centered" style="margin-bottom: 15px;">
+                <span style="font-weight: bold; color: #000;">CVPR 2026 Findings</span>
+              </div>
+              <div class="container">
+                <div class="columns is-centered">
+                  <div class="column is-10">
+                    <div class="is-size-5 publication-authors has-text-centered">
+                      <!-- 作者列表 -->
+                      <span class="author-block">Tingjun Dai<sup>*2</sup>,</span>
+                      <span class="author-block">Mingfei Han<sup>*1,3</sup>,</span>
+                      <span class="author-block">Tingwen Du<sup>1</sup>,</span>
+                      <span class="author-block">Zhiheng Liu<sup>4</sup>,</span>
+                      <span class="author-block">Zhihui Li<sup>1</sup>,</span>
+                      <span class="author-block">Salman Khan<sup>3</sup>,</span>
+                      <span class="author-block">Jun Yu<sup>5</sup>,</span>
+                      <span class="author-block">Xiaojun Chang<sup>1,3</sup></span>
+                    </div>
+                    <div class="is-size-6 publication-authors has-text-centered" style="margin-top: 10px;">
+                      <!-- 机构列表 -->
+                      <span class="author-block"><sup>1</sup>University of Science and Technology of China</span>&nbsp;&nbsp;
+                      <span class="author-block"><sup>2</sup>ReLER Lab, AAII, UTS</span>&nbsp;&nbsp;
+                      <span class="author-block"><sup>3</sup>MBZUAI</span>&nbsp;&nbsp;
+                      <span class="author-block"><sup>4</sup>CUHK</span>&nbsp;&nbsp;
+                      <span class="author-block"><sup>5</sup>Harbin Institute of Technology (Shenzhen)</span>
+                    </div>
+                    <div class="is-size-7 publication-authors has-text-centered" style="margin-top: 5px; color: #888;">
+                      <span>* Equal Contribution</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 三个按钮: Paper / Code / Model -->
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Paper 按钮 - 修改 href 为你的 arXiv 链接 -->
+                  <span class="link-block">
+                    <a
+                      href="#"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <svg
+                          width="20"
+                          height="20"
+                          fill="none"
+                          viewBox="0 0 17.732 24.269"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M573.549,280.916l2.266,2.738,6.674-7.84c.353-.47.52-.717.353-1.117a1.218,1.218,0,0,0-1.061-.748h0a.953.953,0,0,0-.712.262Z"
+                            transform="translate(-566.984 -271.548)"
+                            fill="#bdb9b4"
+                          />
+                          <path
+                            d="M579.525,282.225l-10.606-10.174a1.413,1.413,0,0,0-.834-.5,1.09,1.09,0,0,0-1.027.66c-.167.4-.047.681.319,1.206l8.44,10.242h0l-6.282,7.716a1.336,1.336,0,0,0-.323,1.3,1.114,1.114,0,0,0,1.04.69A.992.992,0,0,0,571,293l8.519-7.92A1.924,1.924,0,0,0,579.525,282.225Z"
+                            transform="translate(-566.984 -271.548)"
+                            fill="#b31b1b"
+                          />
+                          <path
+                            d="M584.32,293.912l-8.525-10.275,0,0L573.53,280.9l-1.389,1.254a2.063,2.063,0,0,0,0,2.965l10.812,10.419a.925.925,0,0,0,.742.282,1.039,1.039,0,0,0,.953-.667A1.261,1.261,0,0,0,584.32,293.912Z"
+                            transform="translate(-566.984 -271.548)"
+                            fill="#bdb9b4"
+                          />
+                        </svg>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <!-- Code 按钮 -->
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/TingjunDai/SPRVLA"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                  <!-- Model 按钮 -->
+                  <span class="link-block">
+                    <a
+                      href="https://huggingface.co/SPRVLA"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-cube"></i>
+                      </span>
+                      <span>Model</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Overview Section ==================== -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3 has-text-centered">Overview</h2>
+
+            <!-- Overview 图片: 替换 src 为你的 overview 图片路径 -->
+            <!-- 通过 max-width 控制缩放: 80%=缩小到80%, 60%=缩小到60%, 100%=原始大小 -->
+            <div style="display: flex; justify-content: center">
+              <img
+                src="./static/assets/overview.png"
+                alt="Overview of See, Plan, Rewind"
+                style="max-width: 50%; height: auto; margin: 10px"
+              />
+            </div>
+
+            <!-- Overview 描述文字: 替换为你的论文描述 -->
+            <p style="text-align: justify">
+              <!-- TODO: 替换为你的 overview 描述文字 -->
+              We introduce <b>S</b>ee, <b>P</b>lan, <b>R</b>ewind (SPR), a progress-aware vision-language-action framework that grounds task progress in concrete 2D spatial subgoals. SPR operates through a continuous cycle: <b>Seeing</b> remaining subtasks with spatial coordinates, <b>Planning</b> trajectories to the next waypoint, and <b>Rewinding</b> to escape erroneous states when progress anomalies are detected. Unlike prior methods relying on abstract progress signals or auxiliary recovery models, SPR achieves fine-grained spatial monitoring and data-efficient error recovery within a single unified model. SPR sets state-of-the-art on LIBERO and LIBERO-Plus benchmarks, and generalizes to challenging real-robot tasks where the baseline fails entirely.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Pipeline Section ==================== -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3 has-text-centered">Pipeline</h2>
+
+            <!-- Pipeline 图片: 替换 src 为你的 pipeline 图片路径 -->
+            <div style="display: flex; justify-content: center">
+              <img
+                src="./static/assets/pipeline.png"
+                alt="Pipeline"
+                class="image is-fullwidth"
+              />
+            </div>
+
+            <!-- Pipeline 描述文字: 替换为你的方法流程描述 -->
+            <p class="content has-text-justified mt-4">
+              <!-- TODO: 替换为你的 pipeline 描述文字 -->
+              SPR framework overview. Given the task description and observation, the model performs See-Plan reasoning, which identifies remaining subtasks with 2D spatial coordinates (See) and plans a gripper trajectory to the next waypoint (Plan), then outputs action tokens. Each step also updates the state recorder, where \(S_N\) denotes the predicted subtask count and \(T_N\) the planned 2D trajectory. The Rewind mechanism examines the state recorder: if no anomaly is detected, the original task description is retained; if sustained anomalies are identified, the task description is switched to a rewind instruction for \(N\) steps before reverting to normal execution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Experiment Section ==================== -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <h2 class="title is-3 has-text-centered">Experiment</h2>
+
+            <!-- ========== LIBERO 实验表格 ========== -->
+            <h3 class="title is-4 has-text-centered mt-5">LIBERO Results</h3>
+            <!-- LIBERO 表格 caption: 替换为你的表格说明文字 -->
+            <p class="content has-text-centered" style="color: #555; margin-bottom: 5px;">
+              Performance on LIBERO. Ours: separately trained on each subset; Ours∗: jointly trained on all four subsets. <b>Bold</b> and <u>underlined</u> values indicate the best and second-best results.
+            </p>
+            <div style="display: flex; justify-content: center">
+              <img
+                src="./static/assets/table_libero.png"
+                alt="LIBERO Results Table"
+                style="max-width: 40%; height: auto; margin: 10px"
+              />
+            </div>
+
+            <!-- ========== LIBERO_Plus 实验表格 ========== -->
+            <h3 class="title is-4 has-text-centered mt-5">LIBERO-Plus Results</h3>
+            <!-- LIBERO-Plus 表格 caption: 替换为你的表格说明文字 -->
+            <p class="content has-text-centered" style="color: #555; margin-bottom: 5px;">
+              OOD robustness on LIBERO-Plus across five perturbation types; subscripts denote performance drops relative to LIBERO. <b>Bold</b> and <u>underlined</u> values indicate the best and second-best success rates. <b style="color: red;">Red bold</b> and <u style="color: red;">red underlined</u> subscripts indicate the smallest and second-smallest drops.
+            </p>
+            <div style="display: flex; justify-content: center">
+              <img
+                src="./static/assets/table_libero_plus.png"
+                alt="LIBERO-Plus Results Table"
+                style="max-width: 90%; height: auto; margin: 10px"
+              />
+            </div>
+
+            <!-- ========== LIBERO 仿真视频 ========== -->
+            <h3 class="title is-4 has-text-centered mt-5">LIBERO</h3>
+
+            <!-- LIBERO 第1行: 3个视频 -->
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; align-items: flex-start">
+              <div style="width: 30%; margin: 1%; display: flex; flex-direction: column">
+                <!-- 任务标题: min-height 固定高度，保证同行视频对齐 -->
+                <p class="content has-text-centered mb-1" style="font-style: normal; font-weight: bold; color: black; min-height: 3.2em; display: flex; align-items: center; justify-content: center;">
+                  open the top drawer and put the bowl inside
+                </p>
+                <video
+                  style="width: 100%; height: auto; object-fit: fill"
+                  controls muted loading="lazy" autoplay loop playsinline
+                >
+                  <source src="./static/assets/libero/task1.mp4" type="video/mp4" />
+                </video>
+                <p class="content has-text-centered mt-1" style="font-size: 0.85rem; color: #555;">
+                  <b>Dynamic replanning:</b> Recovers from object relocation and environment state changes by updating spatial subtasks.
+                </p>
+              </div>
+
+              <div style="width: 30%; margin: 1%; display: flex; flex-direction: column">
+                <p class="content has-text-centered mb-1" style="font-style: normal; font-weight: bold; color: black; min-height: 3.2em; display: flex; align-items: center; justify-content: center;">
+                  put the cream cheese in the bowl
+                </p>
+                <video
+                  style="width: 100%; height: auto; object-fit: fill"
+                  controls muted loading="lazy" autoplay loop playsinline
+                >
+                  <source src="./static/assets/libero/task2.mp4" type="video/mp4" />
+                </video>
+                <p class="content has-text-centered mt-1" style="font-size: 0.85rem; color: #555;">
+                  <b>Persistent retry:</b> Achieves ultimate success after multiple grasp failures through progress-aware error recovery.
+                </p>
+              </div>
+
+              <div style="width: 30%; margin: 1%; display: flex; flex-direction: column">
+                <p class="content has-text-centered mb-1" style="font-style: normal; font-weight: bold; color: black; min-height: 3.2em; display: flex; align-items: center; justify-content: center; font-size: 0.95em;">
+                  put the white mug on the left plate and put the yellow and white mug on the right plate
+                </p>
+                <video
+                  style="width: 100%; height: auto; object-fit: fill"
+                  controls muted loading="lazy" autoplay loop playsinline
+                >
+                  <source src="./static/assets/libero/task3.mp4" type="video/mp4" />
+                </video>
+                <p class="content has-text-centered mt-1" style="font-size: 0.85rem; color: #555;">
+                  <b>Failure recovery:</b> Detects OOD states from failed grasps and resets to familiar configurations for retry.
+                </p>
+              </div>
+            </div>
+
+            <!--
+              添加更多 LIBERO 视频行: 复制上面整个 div 块,
+              修改任务名、视频路径 src、描述文字即可
+            -->
+
+            <!-- ========== LIBERO_Plus 仿真视频 ========== -->
+            <h3 class="title is-4 has-text-centered mt-5">LIBERO-Plus</h3>
+
+            <!-- LIBERO_Plus 第1行: 3个视频 -->
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; align-items: flex-start">
+              <div style="width: 30%; margin: 1%; display: flex; flex-direction: column">
+                <p class="content has-text-centered mb-1" style="font-style: normal; font-weight: bold; color: black; min-height: 3.2em; display: flex; align-items: center; justify-content: center;">
+                  pick up the book and place it in the back compartment of the caddy
+                </p>
+                <video
+                  style="width: 100%; height: auto; object-fit: fill"
+                  controls muted loading="lazy" autoplay loop playsinline
+                >
+                  <source src="./static/assets/libero_plus/task1.mp4" type="video/mp4" />
+                </video>
+                <p class="content has-text-centered mt-1" style="font-size: 0.85rem; color: #555;">
+                  <b>Suboptimal start recovery:</b> Mitigates challenging initial configurations by rewinding to regain spatial freedom and replanning the approach.
+                </p>
+              </div>
+
+              <div style="width: 30%; margin: 1%; display: flex; flex-direction: column">
+                <p class="content has-text-centered mb-1" style="font-style: normal; font-weight: bold; color: black; min-height: 3.2em; display: flex; align-items: center; justify-content: center;">
+                  for our wine collections organization put this bottle on the third shelf of the rack
+                </p>
+                <video
+                  style="width: 100%; height: auto; object-fit: fill"
+                  controls muted loading="lazy" autoplay loop playsinline
+                >
+                  <source src="./static/assets/libero_plus/task2.mp4" type="video/mp4" />
+                </video>
+                <p class="content has-text-centered mt-1" style="font-size: 0.85rem; color: #555;">
+                  <b>Language robustness:</b> Correct task completion despite instruction variations.
+                </p>
+              </div>
+
+              <div style="width: 30%; margin: 1%; display: flex; flex-direction: column">
+                <p class="content has-text-centered mb-1" style="font-style: normal; font-weight: bold; color: black; min-height: 3.2em; display: flex; align-items: center; justify-content: center;">
+                  put both the alphabet soup and the cream cheese box in the basket
+                </p>
+                <video
+                  style="width: 100%; height: auto; object-fit: fill"
+                  controls muted loading="lazy" autoplay loop playsinline
+                >
+                  <source src="./static/assets/libero_plus/task3.mp4" type="video/mp4" />
+                </video>
+                <p class="content has-text-centered mt-1" style="font-size: 0.85rem; color: #555;">
+                  <b>Distractor robustness:</b> Successfully completes the task despite unseen distractor objects in the environment.
+                </p>
+              </div>
+            </div>
+
+            <!--
+              ========== 添加更多视频行模板 ==========
+              复制下面的整个 div 块来添加新的一行（每行3个视频）:
+
+              <div style="display: flex; justify-content: center; flex-wrap: wrap">
+                <div style="width: 30%; height: auto; margin: 1%">
+                  <p class="content has-text-centered mb-1" style="font-style: normal; font-weight: bold; color: black">
+                    任务名称
+                  </p>
+                  <video
+                    style="width: 100%; height: auto; object-fit: fill"
+                    controls muted loading="lazy" autoplay loop playsinline
+                  >
+                    <source src="./static/assets/libero_plus/你的视频.mp4" type="video/mp4" />
+                  </video>
+                  <p class="content has-text-centered mt-1" style="font-size: 0.85rem; color: #555;">
+                    视频描述文字
+                  </p>
+                </div>
+                ... (重复2次得到一行3个)
+              </div>
+            -->
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Citation Section ==================== -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">Citation</h2>
+        If you find our work helpful, please cite us:
+        <div style="position: relative">
+          <pre><code id="bibtex-code">@article{SPR,
+  title={See, Plan, Rewind: Progress-Aware Vision-Language-Action Models for Robust Robotic Manipulation},
+  author={Dai, Tingjun and Han, Mingfei and Du, Tingwen and Liu, Zhiheng and Li, Zhihui and Khan, Salman and Yu, Jun and Chang, Xiaojun},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2026}
+}</code></pre>
+          <button
+            onclick="copyToClipboard()"
+            style="
+              position: absolute;
+              top: 5px;
+              right: 5px;
+              background: none;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            <i class="fa fa-paste" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script>
+      function copyToClipboard() {
+        var copyText = document.getElementById("bibtex-code").innerText;
+        navigator.clipboard.writeText(copyText).then(
+          function () {
+            console.log("copy to clipboard");
+          },
+          function (err) {
+            console.error("fail to copy", err);
+          },
+        );
+      }
+    </script>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            This template is borrowed from
+            <a href="https://nerfies.github.io/"
+              ><span class="dnerf">Nerfies</span></a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
