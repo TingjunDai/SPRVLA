@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sprvla"
+dynamic = ["version"]
+readme = "README.md"
+description = "SPRVLA: Spatial Reasoning Vision-Language-Action Model"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "absl-py",
+    "cached_property",
+    "fiddle >= 0.2.5",
+    "numpy",
+    "torch>=2.3.1",
+    "torchvision>=0.18.1",
+    "torchao==0.10.0",
+    "omegaconf",
+    "rich",
+    "boto3",
+    "google-cloud-storage",
+    "tokenizers",
+    "packaging",
+    "cached_path>=1.6.4",
+    "transformers==v4.52.3",
+    "datasets",
+    "huggingface_hub",
+    "sentencepiece",
+    "requests",
+    "einops",
+    "einops-exts",
+    "tqdm",
+    "gcsfs==2023.9.2",
+    "accelerate",
+    "imageio",
+    "imageio[pyav]",
+    "decord",
+    "av",
+    "moviepy",
+    "peft",
+    "opencv-python-headless"
+
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "mypy>=1.0,<1.4",
+    "black>=23.1,<24.0",
+    "isort>=5.12,<5.13",
+    "pytest",
+    "pytest-sphinx",
+    "twine>=1.11.0",
+    "setuptools",
+    "wheel",
+    "build",
+]
+train = [
+    "wandb",
+    "beaker-py==1.36.2",
+    "beaker-gantry==1.17.0",
+    "click",
+    "torchmetrics",
+    "smashed[remote]>=0.21.1",
+    "safetensors",
+    "scikit-learn",
+    "msgspec>=0.14.0",
+    "openai",
+    "python-Levenshtein",
+    "editdistance"
+]
+serve = [
+    "pydantic",
+    "uvicorn",
+    "gradio",
+    "fastapi",
+]
+all = [
+    "sprvla[dev,train,serve]",
+]
+
+[project.urls]
+Homepage = "https://github.com/allenai/SPRVLA"
+Repository = "https://github.com/allenai/SPRVLA"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["olmo"]
